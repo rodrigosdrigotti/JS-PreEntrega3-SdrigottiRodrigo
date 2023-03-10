@@ -299,7 +299,7 @@ opcion.addEventListener("click", (e)=> {
             setTimeout(limpiezaTicket, 3500);
             break;
         case "8":
-            window.location.href = "/index.html";
+            window.location.href = "https://rodrigosdrigotti.github.io/JS-PreEntrega3-SdrigottiRodrigo/index.html";
             break;
     }
 })
