@@ -135,7 +135,8 @@ function pedirModal(callback) {
 
 function pedirDescripcion(){
     preg = document.querySelector("#formulario");
-    if(preg == null){
+    preg2 = document.querySelector("#formModalDiv");
+    if(preg == null && preg2 == null) {
         formDescripcion = document.createElement("form");
         formDescripcion.id = "formulario";
 
@@ -175,13 +176,23 @@ function pedirDescripcion(){
             e.preventDefault();
             document.getElementById("busquedaFechaDescripcion").appendChild(formDescripcion).remove();
         };
-
+    }
+    else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'CANCELE LA BUSQUEDA PARA CONTINUAR',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+        });
     }
 }
 
 function pedirFecha() {
     preg = document.querySelector("#formulario");
-    if(preg == null){
+    preg2 = document.querySelector("#formModalDiv");
+    if(preg == null && preg2 == null) {
         formFecha = document.createElement("form");
         formFecha.id = "formulario";
 
@@ -221,6 +232,16 @@ function pedirFecha() {
             e.preventDefault();
             document.getElementById("busquedaFechaDescripcion").appendChild(formFecha).remove();
         };
+    }
+    else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'CANCELE LA BUSQUEDA PARA CONTINUAR',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+        });
     }
 }
 
