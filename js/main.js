@@ -234,9 +234,9 @@ opcion.addEventListener("click", (e)=> {
             movimientos.push({fecha:diaHoy, operacion:" Consulta de saldo = " + saldo, saldo: " Saldo = " + saldo});
             break;
         case "2":
+            document.getElementById("resultado").innerHTML = "";
+            document.getElementById("resultado2").innerHTML = "";
             pedirModal(function(value) {
-                document.getElementById("resultado").innerHTML = "";
-                document.getElementById("resultado2").innerHTML = "";
                 retiro = Number(value);
                 if(retiro != 0){
                     if(retiro <= saldo && retiro != 0) {
@@ -261,9 +261,9 @@ opcion.addEventListener("click", (e)=> {
             });
             break;
         case "3":
+            document.getElementById("resultado").innerHTML = "";
+            document.getElementById("resultado2").innerHTML = "";
             pedirModal(function(value) {
-                document.getElementById("resultado").innerHTML = "";
-                document.getElementById("resultado2").innerHTML = "";
                 deposito = Number(value);
                 if(deposito != 0){
                     saldo += deposito;
