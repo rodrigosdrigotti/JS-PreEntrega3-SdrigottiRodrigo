@@ -261,9 +261,9 @@ opcion.addEventListener("click", (e)=> {
             });
             break;
         case "3":
-            document.getElementById("resultado").innerHTML = "";
-            document.getElementById("resultado2").innerHTML = "";
             pedirModal(function(value) {
+                document.getElementById("resultado").innerHTML = "";
+                document.getElementById("resultado2").innerHTML = "";
                 deposito = Number(value);
                 if(deposito != 0){
                     saldo += deposito;
